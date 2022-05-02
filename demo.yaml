@@ -1,0 +1,7 @@
+---
+
+- hosts: localhost
+  roles: 
+    - install_nginx
+  tags: 
+    - install_nginx

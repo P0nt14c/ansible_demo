@@ -1,0 +1,12 @@
+---
+- name: Install nginx
+  ansible.builtin.package:
+    name: nginx
+
+- name: Configure nginx
+  ansible.builtin.include_tasks: configure_nginx.yaml
+
+- name: Enable nginx
+  ansible.builtin.service:
+    name: nginx
+    enabled: yes
